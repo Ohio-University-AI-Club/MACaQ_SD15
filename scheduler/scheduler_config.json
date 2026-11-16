@@ -1,0 +1,33 @@
+{
+  "num_train_timesteps": 1000,
+  "beta_start": 0.00085,
+  "beta_end": 0.012,
+  "beta_schedule": "scaled_linear",
+  "trained_betas": null,
+  "original_inference_steps": 50,
+  "clip_sample": false,
+  "clip_sample_range": 1.0,
+  "set_alpha_to_one": false,
+  "steps_offset": 1,
+  "prediction_type": "epsilon",
+  "thresholding": false,
+  "dynamic_thresholding_ratio": 0.995,
+  "sample_max_value": 1.0,
+  "timestep_spacing": "leading",
+  "timestep_scaling": 10.0,
+  "rescale_betas_zero_snr": false,
+  "_use_default_values": [
+    "clip_sample_range",
+    "prediction_type",
+    "timestep_scaling",
+    "timestep_spacing",
+    "dynamic_thresholding_ratio",
+    "rescale_betas_zero_snr",
+    "thresholding",
+    "sample_max_value",
+    "original_inference_steps"
+  ],
+  "skip_prk_steps": true,
+  "_class_name": "LCMScheduler",
+  "_diffusers_version": "0.6.0"
+}
