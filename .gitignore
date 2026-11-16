@@ -1,0 +1,5 @@
+/text_encoder/model.safetensors
+/unet/model.safetensors
+/vae/diffusion_pytorch_model.safetensors
+/.cache/huggingface/
+__pycache__/
