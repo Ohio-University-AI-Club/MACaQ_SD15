@@ -13,6 +13,8 @@ tags:
 
 # SD15 MACaQ Pruned Full-Width
 
+[![Civitai | Source model](https://img.shields.io/badge/Civitai-Source%20model-6E56CF?style=plastic)](https://civitai.com/models/166609/realism-by-stable-yogi-pony?modelVersionId=1235013) [![Hugging Face | Weights](https://img.shields.io/badge/Hugging%20Face-Weights-FFD21E?style=plastic&logo=huggingface&logoColor=FFD21E)](https://huggingface.co/ApacheOne/SD15_MACaQ_pruned_fullwidth) [![GitHub | Code](https://img.shields.io/badge/GitHub-Code-0969DA?style=plastic&logo=github&logoColor=white)](https://github.com/Ohio-University-AI-Club/MACaQ_SD15)
+
 **72.84% smaller U-Net weight payload** · 1,719.04 MB FP16 → **466.96 MB (445.32 MiB)** packed.
 
 This is an MXFP4 W4A4 quantization of Stable Yogi SD 1.5 V9 LCM. It retains the original U-Net layer dimensions. The repository name follows the earlier MACaQ release. The storage savings come from weight quantization, and all U-Net layers remain present.
