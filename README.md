@@ -2,7 +2,7 @@
 
 [![Civitai | Source model](https://img.shields.io/badge/Civitai-Source%20model-6E56CF?style=plastic)](https://civitai.com/models/166609/realism-by-stable-yogi-pony?modelVersionId=1235013) [![Hugging Face | Weights](https://img.shields.io/badge/Hugging%20Face-Weights-FFD21E?style=plastic&logo=huggingface&logoColor=FFD21E)](https://huggingface.co/ApacheOne/SD15_MACaQ_pruned_fullwidth) [![GitHub | Code](https://img.shields.io/badge/GitHub-Code-0969DA?style=plastic&logo=github&logoColor=white)](https://github.com/Ohio-University-AI-Club/MACaQ_SD15)
 
-[Quick start](#quick-start) · [Inference](#inference) · [License](#license) · [Citation](#citation)
+[Quick start](#quick-start) · [Inference](#inference) · [License](#license) · [Citations](#citations)
 
 **72.84% smaller U-Net weight payload** · 1,719.04 MB FP16 → **466.96 MB (445.32 MiB)** packed.
 
@@ -577,9 +577,16 @@ The GitHub project code is licensed under [Apache 2.0](LICENSE). The vendored ru
 
 Source checkpoint SHA-256 is `1a16a9524427019dc513b398087035e7e36ad2f2aa9691bd71d28ad959e94180`.
 
-## Citation
+<a name="citation"></a>
 
-To cite this release, reference the GitHub repository and the [Hugging Face weights](https://huggingface.co/ApacheOne/SD15_MACaQ_pruned_fullwidth).
+## Citations
+
+To cite this release, reference this repository and the [Hugging Face weights](https://huggingface.co/ApacheOne/SD15_MACaQ_pruned_fullwidth). Credit the upstream checkpoint and methods using the references below.
+
+- **Stable Yogi SD 1.5 V9 LCM** · [source checkpoint, Civitai version 1235013](https://civitai.com/models/166609/realism-by-stable-yogi-pony?modelVersionId=1235013)
+- **MACaQ** · [quantization paper](https://arxiv.org/abs/2611.10649) and [reference implementation](https://github.com/huawei-csl/MACaQ)
+- **Stable Diffusion 1.5** · [base model card](https://huggingface.co/stable-diffusion-v1-5/stable-diffusion-v1-5) and [latent diffusion paper](https://arxiv.org/abs/2112.10752)
+- **Latent Consistency Models** · [few-step inference paper](https://arxiv.org/abs/2310.04378)
 
 ```bibtex
 @misc{macaq_sd15_fullwidth_2026,
@@ -587,6 +594,43 @@ To cite this release, reference the GitHub repository and the [Hugging Face weig
   year         = {2026},
   howpublished = {Ohio University AI Club GitHub repository},
   url          = {https://github.com/Ohio-University-AI-Club/MACaQ_SD15}
+}
+
+@misc{stableyogi_sd15_v9_lcm,
+  author       = {{Stable Yogi}},
+  title        = {{Stable Yogi SD 1.5 V9 LCM}},
+  howpublished = {Civitai model checkpoint},
+  note         = {Model version 1235013},
+  url          = {https://civitai.com/models/166609/realism-by-stable-yogi-pony?modelVersionId=1235013}
+}
+
+@misc{muller2026macaq,
+  author        = {Muller, Lorenz K. and Bich, Philippe and Boretti, Chiara and Chang, Hyun-Min and Zhuang, Jiawei and Cavigelli, Lukas},
+  title         = {{MACaQ}: Fast, Model Agnostic Calibrated Quantization for Low-Precision Weights and Activations},
+  year          = {2026},
+  eprint        = {2611.10649},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  url           = {https://arxiv.org/abs/2611.10649}
+}
+
+@inproceedings{rombach2022latentdiffusion,
+  author    = {Rombach, Robin and Blattmann, Andreas and Lorenz, Dominik and Esser, Patrick and Ommer, Bj{\"o}rn},
+  title     = {High-Resolution Image Synthesis With Latent Diffusion Models},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+  year      = {2022},
+  pages     = {10684--10695},
+  url       = {https://arxiv.org/abs/2112.10752}
+}
+
+@misc{luo2023latentconsistency,
+  author        = {Luo, Simian and Tan, Yiqin and Huang, Longbo and Li, Jian and Zhao, Hang},
+  title         = {Latent Consistency Models: Synthesizing High-Resolution Images with Few-Step Inference},
+  year          = {2023},
+  eprint        = {2310.04378},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.CV},
+  url           = {https://arxiv.org/abs/2310.04378}
 }
 ```
 
