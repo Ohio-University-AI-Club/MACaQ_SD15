@@ -1,23 +1,23 @@
----
-license: other
-license_name: stable-yogi-source-terms
-license_link: "https://civitai.com/models/166609/realism-by-stable-yogi-pony?modelVersionId=1235013"
-pipeline_tag: text-to-image
-tags:
-- stable-diffusion
-- sd-1.5
-- lcm
-- macaq
-- mxfp4
----
-
 # SD15 MACaQ Pruned Full-Width
 
 [![Civitai | Source model](https://img.shields.io/badge/Civitai-Source%20model-6E56CF?style=plastic)](https://civitai.com/models/166609/realism-by-stable-yogi-pony?modelVersionId=1235013) [![Hugging Face | Weights](https://img.shields.io/badge/Hugging%20Face-Weights-FFD21E?style=plastic&logo=huggingface&logoColor=FFD21E)](https://huggingface.co/ApacheOne/SD15_MACaQ_pruned_fullwidth) [![GitHub | Code](https://img.shields.io/badge/GitHub-Code-0969DA?style=plastic&logo=github&logoColor=white)](https://github.com/Ohio-University-AI-Club/MACaQ_SD15)
 
+[Quick start](#quick-start) · [Inference](#inference) · [License](#license) · [Citation](#citation)
+
 **72.84% smaller U-Net weight payload** · 1,719.04 MB FP16 → **466.96 MB (445.32 MiB)** packed.
 
 This is an MXFP4 W4A4 quantization of Stable Yogi SD 1.5 V9 LCM. It retains the original U-Net layer dimensions. The repository name follows the earlier MACaQ release. The storage savings come from weight quantization, and all U-Net layers remain present.
+
+## Quick start
+
+Clone the repository and open the checkout.
+
+```bash
+git clone https://github.com/Ohio-University-AI-Club/MACaQ_SD15.git
+cd MACaQ_SD15
+```
+
+See [Inference](#inference) for the CUDA dependencies and a generation example that downloads the pinned weights from Hugging Face.
 
 ## Weights
 
@@ -518,7 +518,9 @@ The [JSON inventory](sd15_macaq_unet_layers.json) includes every stored U-Net te
 
 </details>
 
-## Run locally
+<a name="run-locally"></a>
+
+## Inference
 
 Run the Python example from the root of the GitHub checkout.
 
@@ -562,7 +564,11 @@ image.save("macaq_fullwidth.png")
 
 The runtime and evaluation files here were imported from [Hugging Face revision `0122586`](https://huggingface.co/ApacheOne/SD15_MACaQ_pruned_fullwidth/tree/0122586271c3dbfde480227d2eb80618cca672dd).
 
-## Sources and terms
+## License
+
+The GitHub project code is licensed under [Apache 2.0](LICENSE). The vendored runtime includes its own [license](unet/runtime/macaq_vendor/LICENSE) and [notices](unet/runtime/macaq_vendor/NOTICE). The model weights are subject to the [Stable Yogi source terms](https://civitai.com/models/166609/realism-by-stable-yogi-pony?modelVersionId=1235013).
+
+## Sources
 
 - [Stable Yogi SD 1.5 V9 LCM source checkpoint, version 1235013](https://civitai.com/models/166609/realism-by-stable-yogi-pony?modelVersionId=1235013).
 - [Stable Yogi checkpoint collection and source terms](https://huggingface.co/Stableyogi/Realism-Pony-Checkpoints).
@@ -570,3 +576,26 @@ The runtime and evaluation files here were imported from [Hugging Face revision 
 - [Earlier MACaQ release](https://huggingface.co/ApacheOne/SD15_MACaQ_pruned).
 
 Source checkpoint SHA-256 is `1a16a9524427019dc513b398087035e7e36ad2f2aa9691bd71d28ad959e94180`.
+
+## Citation
+
+To cite this release, reference the GitHub repository and the [Hugging Face weights](https://huggingface.co/ApacheOne/SD15_MACaQ_pruned_fullwidth).
+
+```bibtex
+@misc{macaq_sd15_fullwidth_2026,
+  title        = {{SD15 MACaQ Pruned Full-Width}},
+  year         = {2026},
+  howpublished = {Ohio University AI Club GitHub repository},
+  url          = {https://github.com/Ohio-University-AI-Club/MACaQ_SD15}
+}
+```
+
+## Model metadata
+
+| Field | Value |
+| --- | --- |
+| `license` | `other` |
+| `license_name` | `stable-yogi-source-terms` |
+| `license_link` | [Stable Yogi source model](https://civitai.com/models/166609/realism-by-stable-yogi-pony?modelVersionId=1235013) |
+| `pipeline_tag` | `text-to-image` |
+| `tags` | `stable-diffusion`, `sd-1.5`, `lcm`, `macaq`, `mxfp4` |
